@@ -14,6 +14,7 @@ start_point = '0'
 print("you have " + str(SLEEP_TIME) + " secs")
 sleep(SLEEP_TIME)
 print("START")
+pyautogui.typewrite("0", INTERVAL)
 for line in file.readlines():
     data = line.split()
     if len(data) == 3:
