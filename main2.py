@@ -18,9 +18,11 @@ pyautogui.typewrite("0", INTERVAL)
 for line in file.readlines():
     data = line.split()
     if len(data) == 3:
-        start_point = data[0]
+        start_point = "0" + data[0]
         data[1] = data[2]
     adress = data[0]
+    if len(adress) == 3:
+        adress = "0" + adress
     code = data[1]
     if int(adress, 16) == int(lastAddress, 16) + 1:
         pyautogui.typewrite(code, INTERVAL)
